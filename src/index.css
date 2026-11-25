@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Hind Siliguri", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Hind Siliguri", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #06070B;
+    color: #F1F5F9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.orvexa-bg-ambient {
+  background-color: #06070B;
+  background-image:
+    radial-gradient(ellipse 65% 45% at 80% 8%, rgba(168, 85, 247, 0.16), transparent 65%),
+    radial-gradient(ellipse 55% 40% at 15% 22%, rgba(200, 250, 80, 0.08), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 90%, rgba(139, 92, 246, 0.10), transparent 70%);
+}
+
+.glass-panel {
+  background: rgba(15, 17, 26, 0.84);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(20, 23, 35, 0.92) 0%, rgba(12, 14, 22, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.hero-gradient-text {
+  background: linear-gradient(92deg, #C084FC 0%, #A855F7 26%, #BEF264 68%, #D9FF5B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-ring-purple {
+  background: linear-gradient(135deg, #A855F7, #38BDF8, #C8FA50);
+}
+
+.neon-ring-lime {
+  background: linear-gradient(135deg, #C8FA50, #34D399, #A855F7);
+}
+
+.glow-lime-btn {
+  background: linear-gradient(135deg, #D9FF5B 0%, #B4F442 100%);
+  color: #090B10;
+  box-shadow: 0 0 24px rgba(200, 250, 80, 0.24);
+}
+
+.glow-lime-btn:hover {
+  background: linear-gradient(135deg, #E4FF7A 0%, #C8FA50 100%);
+  box-shadow: 0 0 30px rgba(200, 250, 80, 0.36);
+}
+
+.glow-purple-btn {
+  border: 1px solid rgba(168, 85, 247, 0.55);
+  background: rgba(88, 28, 135, 0.18);
+  color: #F8FAFC;
+}
+
+.glow-purple-btn:hover {
+  border-color: rgba(192, 132, 252, 0.85);
+  background: rgba(126, 34, 206, 0.28);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Official Sign in with Google button styles */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #747775;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.218s, border-color 0.218s, box-shadow 0.218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff61;
+  border-color: #1f1f1f1f;
+}
+
+.gsi-material-button:not(:disabled):hover {
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  background-color: #f8f9fa;
+}
+
+.gsi-material-button-content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  gap: 10px;
+}
+
+.gsi-material-button-icon {
+  height: 18px;
+  width: 18px;
+  min-width: 18px;
+}
+
+.gsi-material-button-contents {
+  flex-grow: 1;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+

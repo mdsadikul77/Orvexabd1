@@ -1,0 +1,6 @@
+{
+  "name": "Orvexa",
+  "description": "Orvexa — আধুনিক ও নির্ভরযোগ্য মাল্টি-ভেন্ডর ই-কমার্স মার্কেটপ্লেস। কেনাকাটা, সেলার স্টোর, লাইভ ইনবক্স এবং স্মার্ট অর্ডার ট্র্যাকিং।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
